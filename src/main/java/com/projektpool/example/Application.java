@@ -1,5 +1,9 @@
 package com.projektpool.example;
 
+import com.projektpool.example.domain.Project;
+import com.projektpool.example.dao.jpa.ProjectRepository;
+import com.projektpool.example.service.ProjectService;
+
 import com.mangofactory.swagger.plugin.EnableSwagger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +29,12 @@ public class Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(applicationClass, args);
-	}
+    // TODO: create stubs
+    // Project createdProject = new Project("project1","blabla");
+    // ProjectRepository projectRepository = new ProjectRepository();
+    // projectRepository.save(createdProject);
+    // Project createdProject = this.projectService.createProject({"name": "Beds R Us", "description": "Very basic, small rooms but clean"});
+  }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {

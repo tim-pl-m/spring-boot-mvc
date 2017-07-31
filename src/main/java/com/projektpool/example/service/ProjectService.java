@@ -49,6 +49,10 @@ public class ProjectService {
 
     //http://goo.gl/7fxvVf
     public Page<Project> getAllProjects(Integer page, Integer size) {
+        // TODO: create stubs
+        Project createdProject = new Project("TestProjekt für Adesso ProjectPool intern 2017","Beschreibung des Test-Projektes");
+        projectRepository.save(createdProject);
+
         Page pageOfProjects = projectRepository.findAll(new PageRequest(page, size));
         // example of adding to the /metrics
         if (size > 50) {
