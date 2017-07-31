@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.projektpool</groupId>
-    <artifactId>spring-boot-rest-example</artifactId>
-    <version>0.3.0</version>
+    <artifactId>spring-boot-mvc</artifactId>
+    <version>0.0.1</version>
     <packaging>war</packaging>
     <description>Example project demonstrating REST APIs implemented using Spring Boot, in-memory database, embedded Tomcat, Swagger, JsonPath, Hamcrest and MockMVC</description>
 

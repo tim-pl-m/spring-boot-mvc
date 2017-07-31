@@ -4,7 +4,7 @@
 
 spring.jmx:
    enabled: false
- 
+
 spring.datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:bootexample;MODE=MySQL
@@ -35,7 +35,7 @@ info:
     description: ${project.description}
     version: ${project.version}
 
-hotel.service:
+project.service:
   name: 'default profile:'
 ---
 spring:
@@ -44,5 +44,5 @@ spring:
 spring.jpa:
     hibernate.ddl-auto: create-drop
 
-hotel.service:
+project.service:
   name: 'test profile:'

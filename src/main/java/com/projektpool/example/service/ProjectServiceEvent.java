@@ -6,13 +6,13 @@ import org.springframework.context.ApplicationEvent;
  * This is an optional class used in publishing application events.
  * This can be used to inject events into the Spring Boot audit management endpoint.
  */
-public class HotelServiceEvent extends ApplicationEvent {
+public class ProjectServiceEvent extends ApplicationEvent {
 
-    public HotelServiceEvent(Object source) {
+    public ProjectServiceEvent(Object source) {
         super(source);
     }
 
     public String toString() {
-        return "My HotelService Event";
+        return "My ProjectService Event";
     }
 }

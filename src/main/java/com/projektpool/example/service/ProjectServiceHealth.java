@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * into the Spring Boot health management endpoint.
  */
 @Component
-public class HotelServiceHealth implements HealthIndicator {
+public class ProjectServiceHealth implements HealthIndicator {
 
     @Autowired
     private ServiceProperties configuration;
