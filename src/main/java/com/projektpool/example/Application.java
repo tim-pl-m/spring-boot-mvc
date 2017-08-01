@@ -1,7 +1,6 @@
 package com.projektpool.example;
 
 import com.projektpool.example.domain.Project;
-import com.projektpool.example.dao.jpa.ProjectRepository;
 import com.projektpool.example.service.ProjectService;
 
 import com.mangofactory.swagger.plugin.EnableSwagger;
@@ -15,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
+// import org.springframework.context.annotation.Bean;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /*
@@ -32,6 +31,10 @@ public class Application extends SpringBootServletInitializer implements Command
     private static final Class<Application> applicationClass = Application.class;
     private static final Logger log = LoggerFactory.getLogger(applicationClass);
 
+    public static void main(String[] args) {
+      SpringApplication.run(applicationClass, args);
+    }
+
   @Autowired
   ProjectService projectService;
 
@@ -39,7 +42,7 @@ public class Application extends SpringBootServletInitializer implements Command
 // example-Data
   @Override
 	public void run(String... args) {
-    Project createdProject = new Project("project1","blabla");
+    Project createdProject = new Project("TestProjekt für Adesso ProjectPool intern 2017","Beschreibung des Test-Projektes");
     projectService.createProject(createdProject);
 	}
 
@@ -48,14 +51,11 @@ public class Application extends SpringBootServletInitializer implements Command
       return application.sources(applicationClass);
   }
 
-  public static void main(String[] args) {
-		SpringApplication.run(applicationClass, args);
-  }
-
   //TODO replace run()
   // @Bean
-	// CommandLineRunner init(AccountRepository accountRepository,
-	// 		BookmarkRepository bookmarkRepository) {
+	// CommandLineRunner init(ProjectService projectService{
+  //     Project createdProject = new Project("TestProjekt für Adesso ProjectPool intern 2017","Beschreibung des Test-Projektes");
+  //     projectService.createProject(createdProject);
 	// 	return ?
   // }
 
