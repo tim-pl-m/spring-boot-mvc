@@ -28,56 +28,35 @@ import org.springframework.beans.factory.annotation.Autowired;
 @EnableSwagger // auto generation of API docs
 // public class Application extends SpringBootServletInitializer {
 public class Application extends SpringBootServletInitializer implements CommandLineRunner{
-  // implements CommandLineRunner {
 
     private static final Class<Application> applicationClass = Application.class;
     private static final Logger log = LoggerFactory.getLogger(applicationClass);
-
-
-
-  // @Autowired
-	// // private HelloWorldService helloWorldService;
-  // ProjectRepository projectRepository;
 
   @Autowired
   ProjectService projectService;
 
 
+// example-Data
   @Override
 	public void run(String... args) {
-		System.out.println("test");
     Project createdProject = new Project("project1","blabla");
-    // projectRepository.save(createdProject);
     projectService.createProject(createdProject);
 	}
 
   @Override
   protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-    System.out.println("test2");
-    Project createdProject = new Project("project1","blabla");
-    // projectRepository.save(createdProject);
-    projectService.createProject(createdProject);
       return application.sources(applicationClass);
   }
 
   public static void main(String[] args) {
-    System.out.println("test1");
-    // Project createdProject = new Project("project1","blabla");
-    // // projectRepository.save(createdProject);
-    // projectService.createProject(createdProject);
-    
 		SpringApplication.run(applicationClass, args);
-    // TODO: create stubs
-    // Project createdProject = new Project("project1","blabla");
-    // ProjectRepository projectRepository = new ProjectRepository();
-    // projectRepository.save(createdProject);
-    // Project createdProject = this.projectService.createProject({"name": "Beds R Us", "description": "Very basic, small rooms but clean"});
   }
 
+  //TODO replace run()
   // @Bean
 	// CommandLineRunner init(AccountRepository accountRepository,
 	// 		BookmarkRepository bookmarkRepository) {
-	// 	return
+	// 	return ?
   // }
 
 }
