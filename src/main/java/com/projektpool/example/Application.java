@@ -42,7 +42,7 @@ public class Application extends SpringBootServletInitializer implements Command
 // example-Data
   @Override
 	public void run(String... args) {
-    Project createdProject = new Project("TestProjekt für Adesso ProjectPool intern 2017","Beschreibung des Test-Projektes");
+    Project createdProject = new Project("TestProjekt ProjectPool 2017","Beschreibung des Test-Projektes");
     projectService.createProject(createdProject);
 	}
 
@@ -54,7 +54,7 @@ public class Application extends SpringBootServletInitializer implements Command
   //TODO replace run()
   // @Bean
 	// CommandLineRunner init(ProjectService projectService{
-  //     Project createdProject = new Project("TestProjekt für Adesso ProjectPool intern 2017","Beschreibung des Test-Projektes");
+  //     Project createdProject = new Project("TestProjekt","Beschreibung des Test-Projektes");
   //     projectService.createProject(createdProject);
 	// 	return ?
   // }
