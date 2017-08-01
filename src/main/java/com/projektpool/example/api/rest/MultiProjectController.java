@@ -19,9 +19,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 
 @RestController
-@RequestMapping(value = "/project")
+@RequestMapping(value = "/projects")
 @Api(value = "project", description = "Project API")
-public class ProjectController extends AbstractRestHandler {
+public class MultiProjectController extends AbstractRestHandler {
 
     @Autowired
     private ProjectService projectService;
@@ -55,9 +55,7 @@ public class ProjectController extends AbstractRestHandler {
 
     @RequestMapping(value = "/{id}",
             method = RequestMethod.GET,
-            // produces = {"application/json", "application/xml"})
-            produces = {"application/json", "application/xml", "application/x-www-form-urlencoded"})
-            //  'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            produces = {"application/json", "application/xml"})
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Get a single project.", notes = "You have to provide a valid project ID.")
     public

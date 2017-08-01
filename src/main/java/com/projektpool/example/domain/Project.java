@@ -17,17 +17,17 @@ public class Project {
     private long id;
 
     @Column(nullable = false)
-    private String name;
+    private String projektname;
 
     @Column()
-    private String description;
+    private String beschreibung;
 
     public Project() {
     }
 
     public Project(String name, String description) {
-        this.name = name;
-        this.description = description;
+        this.projektname = name;
+        this.beschreibung = description;
     }
 
     public long getId() {
@@ -39,20 +39,20 @@ public class Project {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProjektname() {
+        return projektname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProjektname(String name) {
+        this.projektname = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBeschreibung() {
+        return beschreibung;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBeschreibung(String description) {
+        this.beschreibung = description;
     }
 
 
@@ -60,8 +60,8 @@ public class Project {
     public String toString() {
         return "Project {" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
+                ", name1='" + projektname + '\'' +
+                ", description1='" + beschreibung + '\'' +
                 '}';
     }
 }
