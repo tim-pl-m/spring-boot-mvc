@@ -11,6 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -53,10 +55,11 @@ public class ProjectController extends AbstractRestHandler {
         return this.projectService.getAllProjects(page, size);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/{id}",
             method = RequestMethod.GET,
             // produces = {"application/json", "application/xml"})
-            produces = {"application/json", "application/xml", "application/x-www-form-urlencoded"})
+            produces = {"application/json", "application/xml"})
             //  'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Get a single project.", notes = "You have to provide a valid project ID.")
